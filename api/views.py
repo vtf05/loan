@@ -19,13 +19,6 @@ class ownerViewSet(viewsets.ModelViewSet):
     def create(self,request,*args,**kwargs):
         viewsets.ModelViewSet.create(self,request,*args,**kwargs)
         ob = owner.objects.latest("id")
-        print(ob.vehicle_location)
-        di = {}
-        di["name"]=ob.name
-        di["DPS"]=ob.DPS
-        di["Gyroscope"]=ob.Gyroscope
-        di["BPS"] = ob.BPS
-        print(di)
         y=1
         return Response({"status":"success","condition":y,"tmp":args})
        # return Response({"condition":y})

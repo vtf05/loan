@@ -7,4 +7,4 @@ class ownerSerializer(serializers.ModelSerializer):
      
     class Meta:
         model = owner
-        fields = ('name','DPS','Gyroscope','BPS','Address','vehicle','vehicle_no','vehicle_pol',"avatar")
+        fields = ('name','mobile_no',"adhar",'Address',"avatar1","avatar2","avatar3","avatar4")
