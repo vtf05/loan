@@ -25,7 +25,7 @@ SECRET_KEY = '+7yi6+h+c%00&5$8gk86k$(q#i&kz4nmhhuju@6$hqy00x)!t_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["baseloan.herokuapp.com/","127.0.0.1:8000/"]
+ALLOWED_HOSTS = ["baseloan.herokuapp.com","127.0.0.1:8000/"]
 
 
 # Application definition
