@@ -17,5 +17,5 @@ class owner(models.Model):
     def to_dict(self):
         return {'name':self.name,'DPS':self.DPS,
         'BPS':self.BPS, 'Gyroscope':self.Gyroscope,'Address':self.Address,
-        'vehicle':self.vehicle,'vehicle_fuel':self.vehicle_no,'vehicle_pol':self.vehicle_pol,"avatar":self.avatar}
+        'vehicle':self.vehicle,'vehicle_no':self.vehicle_no,'vehicle_pol':self.vehicle_pol,"avatar":self.avatar}
      
