@@ -7,14 +7,15 @@ from rest_framework import status
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from .serializers import  ownerSerializer
-
+from rest_framework.decorators import action
 from . models import owner
 
 
 
 class ownerViewSet(viewsets.ModelViewSet):
-    queryset = owner.objects.all()
+    queryset = owner.objects.all()[:10]
     serializer_class = ownerSerializer
+    permission_classes = [IsAuthenticated]
 
     def create(self,request,*args,**kwargs):
         viewsets.ModelViewSet.create(self,request,*args,**kwargs)
@@ -22,6 +23,15 @@ class ownerViewSet(viewsets.ModelViewSet):
         y=1
         return Response({"status":"success","condition":y,"tmp":args})
        # return Response({"condition":y})
+
+       
+   # @action(detail=True, methods=['get'] )  
+    def top(self,request):
+        ob=owner.object.all()[:10]
+        print(ob)
+        print("function is called")
+        return Response(ob)
+
 
     def update(self, request, *args, **kwargs):
         partial = kwargs.pop('partial', False)

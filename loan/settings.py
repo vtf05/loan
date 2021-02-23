@@ -25,7 +25,7 @@ SECRET_KEY = '+7yi6+h+c%00&5$8gk86k$(q#i&kz4nmhhuju@6$hqy00x)!t_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["baseloan.herokuapp.com","127.0.0.1:8000"]
+ALLOWED_HOSTS = ["baseloan.herokuapp.com","127.0.0.1"]
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles', 
     "api",
     "rest_framework",
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -104,6 +105,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+'DEFAULT_PERMISSION_CLASSES': [
+'rest_framework.permissions.IsAuthenticated',
+],
+'DEFAULT_AUTHENTICATION_CLASSES': [
+'rest_framework.authentication.SessionAuthentication',
+'rest_framework.authentication.TokenAuthentication', # new
+],
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
