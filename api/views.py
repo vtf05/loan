@@ -13,7 +13,7 @@ from . models import owner
 
 
 class ownerViewSet(viewsets.ModelViewSet):
-    queryset = owner.objects.all()[:10]
+    queryset = owner.objects.all()
     serializer_class = ownerSerializer
     permission_classes = [IsAuthenticated]
 
