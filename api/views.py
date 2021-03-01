@@ -20,12 +20,11 @@ class ownerViewSet(viewsets.ModelViewSet):
     def create(self,request,*args,**kwargs):
         viewsets.ModelViewSet.create(self,request,*args,**kwargs)
         ob = owner.objects.latest("id")
-        y=1
         return Response({"status":"success","condition":y,"tmp":args})
        # return Response({"condition":y})
 
        
-   # @action(detail=True, methods=['get'] )  
+    @action(detail=True, methods=['get'] )  
     def top(self,request):
         ob=owner.object.all()[:10]
         print(ob)
