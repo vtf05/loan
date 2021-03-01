@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class owner(models.Model):
+    id = models.AutoField(primary_key=True)
     name= models.CharField(max_length=50,default="bot")
     mobile_no= models.IntegerField()
     adhar= models.IntegerField()
@@ -14,7 +15,7 @@ class owner(models.Model):
         return self.name
 
     def to_dict(self):
-        return {'name':self.name,'mobile_no':self.mobile_no,
+        return {"id":self.id ,'name':self.name,'mobile_no':self.mobile_no,
         'adhar':self.adhar,     'Address':self.Address,
         "avatar1":self.avatar1, "avatar2":self.avatar2,
         "avatar3":self.avatar3, "avatar4":self.avatar4  }
