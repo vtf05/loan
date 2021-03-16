@@ -75,7 +75,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'loan.wsgi.application'
-
+ADMIN_SITE_HEADER = "My Administration"
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases

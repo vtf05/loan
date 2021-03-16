@@ -24,7 +24,7 @@ class ownerViewSet(viewsets.ModelViewSet):
        # return Response({"condition":y})
 
        
-    @action(detail=True, methods=['get'] )  
+   
     def top(self,request):
         ob=owner.object.all()[:10]
         print(ob)
