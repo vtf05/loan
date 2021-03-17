@@ -89,6 +89,8 @@ DATABASES = {
         "HOST": "localhost"
     }
 }
+
+
 AUTH_USER_MODEL = 'api.User'
 
 # Password validation
