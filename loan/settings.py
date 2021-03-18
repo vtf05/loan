@@ -83,10 +83,10 @@ ADMIN_SITE_HEADER = "My Administration"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "admin",
-        "USER": "postgres",
-        "PASSWORD":"05Avinash",
-        "HOST": "localhost"
+        'NAME': "d1ilrt4dt0a9bc",
+        "USER": "fibvdksgjewukm",
+        "PASSWORD":"9b53d9bb66fe47949df1954321473cc535fd33c88880481e60b60669cb616b34",
+        "HOST": "ec2-54-205-183-19.compute-1.amazonaws.com"
     }
 }
 
